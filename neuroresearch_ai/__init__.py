@@ -4,6 +4,9 @@ NeuroResearch-AI: Advanced Multi-Agent Research System
 
 An enhanced research automation system with self-improving methodologies 
 and cross-domain knowledge integration.
+
+Author: Sung Hun Kwag (sunghunkwag@gmail.com)
+License: MIT
 """
 
 from .core import (
