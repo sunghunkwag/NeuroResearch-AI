@@ -43,7 +43,7 @@ async def ai_research_example():
         enable_ethics_guardian=True
     )
     
-    print("🤖 Starting AI research on transformer attention mechanisms...")
+    print("Starting AI research on transformer attention mechanisms...")
     
     # Conduct research
     results = await research_system.conduct_research(
@@ -57,7 +57,7 @@ async def ai_research_example():
         quality_threshold=0.85
     )
     
-    print(f"✅ Research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
     
     # Generate comprehensive report
     report = research_system.generate_research_report(results)
@@ -66,14 +66,14 @@ async def ai_research_example():
     with open("./ai_research_project/reports/transformer_attention_report.md", "w") as f:
         f.write(report)
     
-    print("📄 Research report saved!")
+    print("Research report saved!")
     
     # Export methodology for future use
     methodology = research_system.export_methodology("json")
     with open("./ai_research_project/configs/methodology_export.json", "w") as f:
         f.write(methodology)
     
-    print("📋 Methodology exported for reproducibility!")
+    print("Methodology exported for reproducibility!")
     
     return results
 
@@ -118,7 +118,7 @@ async def neuroscience_research_example():
         enable_ethics_guardian=True  # Critical for human subjects research
     )
     
-    print("🧠 Starting neuroscience research on memory consolidation...")
+    print("Starting neuroscience research on memory consolidation...")
     
     results = await research_system.conduct_research(
         research_question=context.research_question,
@@ -131,7 +131,7 @@ async def neuroscience_research_example():
         quality_threshold=0.9  # Higher threshold for human subjects research
     )
     
-    print(f"✅ Neuroscience research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Neuroscience research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
     
     # Generate report with emphasis on ethical compliance
     report = research_system.generate_research_report(results)
@@ -139,7 +139,7 @@ async def neuroscience_research_example():
     with open("./neuroscience_project/reports/memory_consolidation_report.md", "w") as f:
         f.write(report)
     
-    print("📄 Neuroscience research report saved!")
+    print("Neuroscience research report saved!")
     
     return results
 
@@ -188,7 +188,7 @@ async def interdisciplinary_research_example():
         enable_ethics_guardian=True
     )
     
-    print("🌐 Starting interdisciplinary AI-neuroscience research...")
+    print("Starting interdisciplinary AI-neuroscience research...")
     
     results = await research_system.conduct_research(
         research_question=context.research_question,
@@ -202,14 +202,14 @@ async def interdisciplinary_research_example():
         quality_threshold=0.88
     )
     
-    print(f"✅ Interdisciplinary research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Interdisciplinary research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
     
     report = research_system.generate_research_report(results)
     
     with open("./interdisciplinary_project/reports/brain_inspired_ai_report.md", "w") as f:
         f.write(report)
     
-    print("📄 Interdisciplinary research report saved!")
+    print("Interdisciplinary research report saved!")
     
     return results
 
@@ -217,16 +217,16 @@ async def interdisciplinary_research_example():
 async def main():
     """Run all examples"""
     
-    print("🚀 NeuroResearch-AI Examples")
+    print("NeuroResearch-AI Examples")
     print("=" * 50)
     
     # Run AI research example
     print("\n1. AI/ML Research Example:")
     try:
         await ai_research_example()
-        print("✅ AI research example completed successfully!")
+        print("AI research example completed successfully!")
     except Exception as e:
-        print(f"❌ AI research example failed: {e}")
+        print(f"AI research example failed: {e}")
     
     print("\n" + "-" * 50)
     
@@ -234,9 +234,9 @@ async def main():
     print("\n2. Neuroscience Research Example:")
     try:
         await neuroscience_research_example()
-        print("✅ Neuroscience research example completed successfully!")
+        print("Neuroscience research example completed successfully!")
     except Exception as e:
-        print(f"❌ Neuroscience research example failed: {e}")
+        print(f"Neuroscience research example failed: {e}")
     
     print("\n" + "-" * 50)
     
@@ -244,16 +244,16 @@ async def main():
     print("\n3. Interdisciplinary Research Example:")
     try:
         await interdisciplinary_research_example()
-        print("✅ Interdisciplinary research example completed successfully!")
+        print("Interdisciplinary research example completed successfully!")
     except Exception as e:
-        print(f"❌ Interdisciplinary research example failed: {e}")
+        print(f"Interdisciplinary research example failed: {e}")
     
-    print("\n🎉 All examples completed!")
+    print("\nAll examples completed!")
 
 
 if __name__ == "__main__":
     # Note: In practice, you would set your API keys as environment variables
-    print("⚠️  Remember to set your API keys before running these examples!")
+    print("Remember to set your API keys before running these examples!")
     print("Set OPENAI_API_KEY, ANTHROPIC_API_KEY, and GOOGLE_API_KEY environment variables")
     print("\nTo run examples:")
     print("python examples/research_examples.py")

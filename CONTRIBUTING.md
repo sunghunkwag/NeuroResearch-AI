@@ -1,36 +1,36 @@
 # Contributing to NeuroResearch-AI
 
-Thank you for your interest in contributing to NeuroResearch-AI! 🧠🤖
+Thank you for your interest in contributing to NeuroResearch-AI!
 
-## 🚀 Ways to Contribute
+## Ways to Contribute
 
-### 🐛 Bug Reports
+### Bug Reports
 - Use the GitHub issue tracker
 - Include detailed reproduction steps
 - Provide environment information (Python version, OS, etc.)
 - Include relevant logs and error messages
 
-### 💡 Feature Requests
+### Feature Requests
 - Describe the feature and its use case
 - Explain how it fits with the project goals
 - Consider implementation approaches
 
-### 🔬 Research Domain Extensions
+### Research Domain Extensions
 - Add new research domain templates
 - Implement domain-specific methodologies
 - Contribute evaluation metrics
 
-### 🤖 Agent Enhancements
+### Agent Enhancements
 - Improve existing agent capabilities
 - Add new specialized agents
 - Enhance inter-agent collaboration
 
-### 📚 Documentation
+### Documentation
 - Improve README and examples
 - Add tutorials and guides
 - Document API references
 
-## 🛠️ Development Setup
+## Development Setup
 
 1. **Fork the repository**
    ```bash
@@ -55,7 +55,7 @@ Thank you for your interest in contributing to NeuroResearch-AI! 🧠🤖
    pytest
    ```
 
-## 📝 Code Standards
+## Code Standards
 
 ### Style Guidelines
 - Follow PEP 8 (enforced by Black)
@@ -76,7 +76,7 @@ Thank you for your interest in contributing to NeuroResearch-AI! 🧠🤖
   - `fix: resolve agent coordination bug`
   - `docs: update API documentation`
 
-## 🔄 Pull Request Process
+## Pull Request Process
 
 1. **Create feature branch**
    ```bash
@@ -107,7 +107,7 @@ Thank you for your interest in contributing to NeuroResearch-AI! 🧠🤖
    - Update tests and docs as needed
    - Ensure CI passes
 
-## 🏗️ Architecture Guidelines
+## Architecture Guidelines
 
 ### Agent Design
 - Each agent should have a clear, focused responsibility
@@ -127,7 +127,7 @@ Thank you for your interest in contributing to NeuroResearch-AI! 🧠🤖
 - Enable knowledge transfer between domains
 - Maintain domain expertise while allowing synthesis
 
-## 🎯 Priority Areas
+## Priority Areas
 
 We especially welcome contributions in these areas:
 
@@ -149,7 +149,7 @@ We especially welcome contributions in these areas:
 - **Advanced Analytics**: Research trend analysis and predictions
 - **Mobile Companion**: Mobile app for research monitoring
 
-## 📋 Issue Labels
+## Issue Labels
 
 - `bug`: Something isn't working
 - `enhancement`: New feature or request
@@ -161,7 +161,7 @@ We especially welcome contributions in these areas:
 - `meta-learning`: Self-improvement capabilities
 - `cross-domain`: Interdisciplinary features
 
-## 🤝 Community Guidelines
+## Community Guidelines
 
 ### Be Respectful
 - Treat all contributors with respect
@@ -178,13 +178,13 @@ We especially welcome contributions in these areas:
 - Cite sources and prior work
 - Maintain scientific rigor
 
-## 📞 Getting Help
+## Getting Help
 
 - **GitHub Discussions**: For questions and general discussion
 - **GitHub Issues**: For bug reports and feature requests
 - **Email**: sunghunkwag@gmail.com for direct communication
 
-## 🏆 Recognition
+## Recognition
 
 Contributors will be recognized in:
 - README.md contributors section
@@ -192,10 +192,10 @@ Contributors will be recognized in:
 - Project documentation
 - Conference presentations and papers
 
-## 📄 License
+## License
 
 By contributing to NeuroResearch-AI, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
-**Thank you for helping advance scientific research through AI! 🧠🔬🤖**
+**Thank you for helping advance scientific research through AI!**
