@@ -3,6 +3,7 @@ Example usage of NeuroResearch-AI for AI/ML research
 """
 
 import asyncio
+import os
 from neuroresearch_ai import (
     NeuroResearchAI,
     ResearchContext,
@@ -28,9 +29,9 @@ async def ai_research_example():
     
     # API keys (in practice, load from environment or config)
     api_keys = {
-        "openai": "your-openai-key-here",
-        "anthropic": "your-anthropic-key-here",
-        "google": "your-google-key-here"
+        "openai": os.environ.get("OPENAI_API_KEY", "DUMMY_KEY"),
+        "anthropic": "DUMMY_KEY",
+        "google": "DUMMY_KEY"
     }
     
     # Initialize the research system
@@ -57,7 +58,7 @@ async def ai_research_example():
         quality_threshold=0.85
     )
     
-    print(f"Research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Research completed with quality score: {results.get('quality_score', 'N/A')}")
     
     # Generate comprehensive report
     report = research_system.generate_research_report(results)
@@ -104,9 +105,9 @@ async def neuroscience_research_example():
     ])
     
     api_keys = {
-        "openai": "your-openai-key-here",
-        "anthropic": "your-anthropic-key-here",
-        "google": "your-google-key-here"
+        "openai": os.environ.get("OPENAI_API_KEY", "DUMMY_KEY"),
+        "anthropic": "DUMMY_KEY",
+        "google": "DUMMY_KEY"
     }
     
     research_system = NeuroResearchAI(
@@ -131,7 +132,7 @@ async def neuroscience_research_example():
         quality_threshold=0.9  # Higher threshold for human subjects research
     )
     
-    print(f"Neuroscience research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Neuroscience research completed with quality score: {results.get('quality_score', 'N/A')}")
     
     # Generate report with emphasis on ethical compliance
     report = research_system.generate_research_report(results)
@@ -202,7 +203,7 @@ async def interdisciplinary_research_example():
         quality_threshold=0.88
     )
     
-    print(f"Interdisciplinary research completed with quality score: {results.get('quality_score', 'N/A'):.3f}")
+    print(f"Interdisciplinary research completed with quality score: {results.get('quality_score', 'N/A')}")
     
     report = research_system.generate_research_report(results)
     
@@ -253,10 +254,7 @@ async def main():
 
 if __name__ == "__main__":
     # Note: In practice, you would set your API keys as environment variables
-    print("Remember to set your API keys before running these examples!")
-    print("Set OPENAI_API_KEY, ANTHROPIC_API_KEY, and GOOGLE_API_KEY environment variables")
-    print("\nTo run examples:")
-    print("python examples/research_examples.py")
+    print("Running examples with available API keys...")
     
-    # Uncomment to run examples:
-    # asyncio.run(main())
+    # Run examples:
+    asyncio.run(main())

@@ -23,8 +23,8 @@ from langgraph.graph import StateGraph, END
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain_anthropic import ChatAnthropic
-from langchain_google_genai import ChatGoogleGenerativeAI
+
+
 
 
 class ResearchDomain(Enum):
@@ -169,7 +169,7 @@ class NeuroResearchAI:
             role=AgentRole.LITERATURE_SCOUT,
             expertise_domains=list(ResearchDomain),
             model_config={
-                "model": "claude-3-sonnet-20240229",
+                "model": "gpt-4o-mini",
                 "temperature": 0.2,
                 "max_tokens": 8000
             },
@@ -181,7 +181,7 @@ class NeuroResearchAI:
             role=AgentRole.METHODOLOGY_DESIGNER,
             expertise_domains=[self.research_context.domain],
             model_config={
-                "model": "gemini-1.5-pro",
+                "model": "gpt-4o-mini",
                 "temperature": 0.4,
                 "max_tokens": 6000
             },
@@ -205,7 +205,7 @@ class NeuroResearchAI:
             role=AgentRole.PEER_REVIEWER,
             expertise_domains=list(ResearchDomain),
             model_config={
-                "model": "claude-3-opus-20240229",
+                "model": "gpt-4o-mini",
                 "temperature": 0.3,
                 "max_tokens": 8000
             },
@@ -229,7 +229,7 @@ class NeuroResearchAI:
             role=AgentRole.PUBLICATION_EXPERT,
             expertise_domains=[self.research_context.domain],
             model_config={
-                "model": "claude-3-sonnet-20240229",
+                "model": "gpt-4o-mini",
                 "temperature": 0.4,
                 "max_tokens": 12000
             },
@@ -241,7 +241,7 @@ class NeuroResearchAI:
             role=AgentRole.CROSS_DOMAIN_SYNTHESIZER,
             expertise_domains=list(ResearchDomain),
             model_config={
-                "model": "gemini-1.5-pro",
+                "model": "gpt-4o-mini",
                 "temperature": 0.5,
                 "max_tokens": 8000
             },
@@ -316,29 +316,21 @@ class NeuroResearchAI:
         """Get LLM instance based on configuration"""
         model_name = model_config["model"]
         
+        # Use OpenAI as the default and only supported LLM
         if "gpt" in model_name:
-            return ChatOpenAI(
-                model=model_name,
-                temperature=model_config["temperature"],
-                max_tokens=model_config["max_tokens"],
-                api_key=self.api_keys.get("openai")
-            )
-        elif "claude" in model_name:
-            return ChatAnthropic(
-                model=model_name,
-                temperature=model_config["temperature"],
-                max_tokens=model_config["max_tokens"],
-                api_key=self.api_keys.get("anthropic")
-            )
-        elif "gemini" in model_name:
-            return ChatGoogleGenerativeAI(
-                model=model_name,
-                temperature=model_config["temperature"],
-                max_output_tokens=model_config["max_tokens"],
-                google_api_key=self.api_keys.get("google")
-            )
+            model_to_use = model_name
+        elif "claude" in model_name or "gemini" in model_name:
+            model_to_use = "gpt-4o-mini"
+            self.logger.warning(f"Model {model_name} is not available. Falling back to {model_to_use}.")
         else:
             raise ValueError(f"Unsupported model: {model_name}")
+
+        return ChatOpenAI(
+            model=model_to_use,
+            temperature=model_config["temperature"],
+            max_tokens=model_config["max_tokens"],
+            api_key=self.api_keys.get("openai")
+        )
 
     async def conduct_research(
         self,
