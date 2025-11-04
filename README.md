@@ -1,4 +1,4 @@
-# NeuroResearch-AI 🧠🤖
+# NeuroResearch-AI
 
 **Advanced Multi-Agent Research System with Self-Improving Methodologies and Cross-Domain Knowledge Integration**
 
@@ -6,46 +6,46 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code Style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-## 🌟 Overview
+## Overview
 
 NeuroResearch-AI is an enhanced research automation system that builds upon the foundation of [Denario](https://github.com/AstroPilot-AI/Denario) with significant improvements in multi-agent coordination, self-improving methodologies, and cross-domain knowledge integration.
 
-### 🚀 Key Enhancements over Denario
+### Key Enhancements over Denario
 
-- **🤝 Hybrid Multi-Agent System**: LangGraph + AutoGen integration for superior agent coordination
-- **🔄 Self-Improving Methodologies**: Meta-learning algorithms that optimize research approaches over time  
-- **🌐 Cross-Domain Knowledge Integration**: Synthesizes insights across multiple research domains
-- **⚖️ Ethics Guardian System**: Automated research ethics verification and compliance checking
-- **👥 Real-Time Peer Review Simulation**: Multi-perspective quality assessment before publication
-- **📊 Dynamic Quality Assessment**: Multi-dimensional research quality metrics and improvement suggestions
-- **🧠 Meta-Learning Optimization**: Learns from past research projects to improve future methodologies
-- **🔗 Collaborative Agent Networks**: Enhanced inter-agent communication and knowledge sharing
+- **Hybrid Multi-Agent System**: LangGraph + AutoGen integration for superior agent coordination
+- **Self-Improving Methodologies**: Meta-learning algorithms that optimize research approaches over time  
+- **Cross-Domain Knowledge Integration**: Synthesizes insights across multiple research domains
+- **Ethics Guardian System**: Automated research ethics verification and compliance checking
+- **Real-Time Peer Review Simulation**: Multi-perspective quality assessment before publication
+- **Dynamic Quality Assessment**: Multi-dimensional research quality metrics and improvement suggestions
+- **Meta-Learning Optimization**: Learns from past research projects to improve future methodologies
+- **Collaborative Agent Networks**: Enhanced inter-agent communication and knowledge sharing
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Agents
 
-1. **🎯 Research Director** - Strategic oversight and meta-learning coordination
-2. **📚 Literature Scout** - Enhanced cross-domain literature discovery and analysis  
-3. **🔬 Methodology Designer** - Dynamic experimental design with self-improvement
-4. **📈 Data Analyst** - Advanced statistical analysis and visualization
-5. **👨‍💼 Peer Reviewer** - Multi-perspective quality assurance and feedback
-6. **⚖️ Ethics Guardian** - Research ethics verification and compliance
-7. **✍️ Publication Expert** - Scientific writing and journal formatting
-8. **🌐 Cross-Domain Synthesizer** - Knowledge integration across research fields
+1. **Research Director** - Strategic oversight and meta-learning coordination
+2. **Literature Scout** - Enhanced cross-domain literature discovery and analysis  
+3. **Methodology Designer** - Dynamic experimental design with self-improvement
+4. **Data Analyst** - Advanced statistical analysis and visualization
+5. **Peer Reviewer** - Multi-perspective quality assurance and feedback
+6. **Ethics Guardian** - Research ethics verification and compliance
+7. **Publication Expert** - Scientific writing and journal formatting
+8. **Cross-Domain Synthesizer** - Knowledge integration across research fields
 
 ### Research Domains Supported
 
-- 🧠 Neuroscience
-- 🤖 Artificial Intelligence & Machine Learning  
-- ⚛️ Physics
-- 🧪 Chemistry
-- 🧬 Biology
-- 🧠 Psychology
-- 💻 Computer Science
-- 🔬 Interdisciplinary Research
+- Neuroscience
+- Artificial Intelligence & Machine Learning  
+- Physics
+- Chemistry
+- Biology
+- Psychology
+- Computer Science
+- Interdisciplinary Research
 
-## 📦 Installation
+## Installation
 
 ### From Source
 
@@ -61,7 +61,7 @@ pip install -e .
 pip install neuroresearch-ai
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage
 
@@ -150,33 +150,33 @@ results = await research_system.conduct_research(
 )
 ```
 
-## 📊 Features
+## Features
 
-### 🔄 Self-Improving Research Methodologies
+### Self-Improving Research Methodologies
 
 - **Meta-Learning Pipeline**: Learns from previous research projects to optimize future approaches
 - **Dynamic Method Selection**: Chooses optimal research methodologies based on domain and question type
 - **Performance Tracking**: Monitors agent performance and adjusts strategies accordingly
 
-### 🌐 Cross-Domain Knowledge Integration  
+### Cross-Domain Knowledge Integration  
 
 - **Multi-Domain Literature Search**: Discovers relevant research across different fields
 - **Knowledge Synthesis**: Combines insights from multiple domains for novel approaches
 - **Domain Transfer Learning**: Applies successful methodologies across research areas
 
-### ⚖️ Ethics Guardian System
+### Ethics Guardian System
 
 - **Automated Ethics Checking**: Verifies research compliance with ethical guidelines
 - **Risk Assessment**: Identifies potential ethical concerns before research execution
 - **Documentation**: Maintains ethical consideration records for transparency
 
-### 👥 Collaborative Agent Network
+### Collaborative Agent Network
 
 - **Dynamic Collaboration**: Agents form optimal collaboration patterns based on research needs
 - **Knowledge Sharing**: Efficient inter-agent communication and memory systems
 - **Conflict Resolution**: Handles disagreements between agents through structured debate
 
-## 🛠️ Development
+## Development
 
 ### Setup Development Environment
 
@@ -220,7 +220,7 @@ flake8 neuroresearch_ai/
 mypy neuroresearch_ai/
 ```
 
-## 📈 Performance Comparisons with Denario
+## Performance Comparisons with Denario
 
 | Feature | Denario | NeuroResearch-AI | Improvement |
 |---------|---------|------------------|-------------|
@@ -231,30 +231,30 @@ mypy neuroresearch_ai/
 | Meta-Learning | None | Adaptive Improvement | 25% efficiency gain over time |
 | Reproducibility | Basic | Enhanced with Versioning | 90% reproducibility rate |
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 ### Areas for Contribution
 
-- 🔬 New research domain templates
-- 🤖 Additional AI model integrations  
-- 📊 Enhanced quality metrics
-- 🌐 Cross-domain synthesis algorithms
-- ⚖️ Ethics verification frameworks
-- 📝 Documentation and examples
+- New research domain templates
+- Additional AI model integrations  
+- Enhanced quality metrics
+- Cross-domain synthesis algorithms
+- Ethics verification frameworks
+- Documentation and examples
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built upon the excellent foundation of [Denario](https://github.com/AstroPilot-AI/Denario) by AstroPilot-AI
 - Inspired by advances in multi-agent systems and meta-learning
 - Thanks to the open-source AI research community
 
-## 📞 Contact
+## Contact
 
 - **Author**: Sung Hun Kwag
 - **Email**: sunghunkwag@gmail.com  
@@ -262,4 +262,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-*"Advancing scientific research through intelligent agent collaboration and continuous learning"* 🧠🤖🔬
+*"Advancing scientific research through intelligent agent collaboration and continuous learning"*

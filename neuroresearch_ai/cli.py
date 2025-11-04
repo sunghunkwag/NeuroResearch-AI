@@ -21,7 +21,7 @@ from neuroresearch_ai import (
 
 app = typer.Typer(
     name="neuroresearch",
-    help="🧠🤖 NeuroResearch-AI: Advanced Multi-Agent Research System",
+    help="NeuroResearch-AI: Advanced Multi-Agent Research System",
     add_completion=False
 )
 console = Console()
@@ -85,16 +85,16 @@ def create_project(
             }, f, indent=2)
         
         console.print(Panel(
-            f"✅ Project '{name}' created successfully!\n"
-            f"📁 Location: {project_path}\n"
-            f"🔬 Domain: {domain_enum.value}\n"
-            f"📋 Template: {template or 'default'}",
-            title="🧠 NeuroResearch-AI Project Created",
+            f"Project '{name}' created successfully!\n"
+            f"Location: {project_path}\n"
+            f"Domain: {domain_enum.value}\n"
+            f"Template: {template or 'default'}",
+            title="NeuroResearch-AI Project Created",
             style="green"
         ))
         
     except Exception as e:
-        console.print(f"❌ Error creating project: {e}", style="red")
+        console.print(f"Error creating project: {e}", style="red")
         raise typer.Exit(1)
 
 
@@ -138,7 +138,7 @@ def conduct_research(
             )
             
             # Initialize research system
-            console.print("🤖 Initializing NeuroResearch-AI system...")
+            console.print("Initializing NeuroResearch-AI system...")
             research_system = NeuroResearchAI(
                 project_dir=project_dir,
                 research_context=context,
@@ -154,14 +154,14 @@ def conduct_research(
                 TextColumn("[progress.description]{task.description}"),
                 console=console
             ) as progress:
-                task = progress.add_task("🔬 Conducting research...", total=None)
+                task = progress.add_task("Conducting research...", total=None)
                 
                 results = await research_system.conduct_research(
                     research_question=question,
                     quality_threshold=quality_threshold
                 )
                 
-                progress.update(task, description="✅ Research completed!")
+                progress.update(task, description="Research completed!")
             
             # Generate and save report
             report = research_system.generate_research_report(results)
@@ -171,15 +171,15 @@ def conduct_research(
                 f.write(report)
             
             console.print(Panel(
-                f"🎉 Research completed successfully!\n"
-                f"📊 Quality Score: {results.get('quality_score', 'N/A')}\n" 
-                f"📄 Report saved to: {report_file}",
-                title="🧠 Research Results",
+                f"Research completed successfully!\n"
+                f"Quality Score: {results.get('quality_score', 'N/A')}\n" 
+                f"Report saved to: {report_file}",
+                title="Research Results",
                 style="green"
             ))
             
         except Exception as e:
-            console.print(f"❌ Research failed: {e}", style="red")
+            console.print(f"Research failed: {e}", style="red")
             raise typer.Exit(1)
     
     # Run the async function
@@ -190,7 +190,7 @@ def conduct_research(
 def list_domains():
     """List available research domains"""
     
-    table = Table(title="🔬 Available Research Domains")
+    table = Table(title="Available Research Domains")
     table.add_column("Domain", style="cyan")
     table.add_column("Description", style="green")
     
@@ -220,7 +220,7 @@ def validate_project(
     project_path = Path(project_dir)
     
     if not project_path.exists():
-        console.print(f"❌ Project directory does not exist: {project_dir}", style="red")
+        console.print(f"Project directory does not exist: {project_dir}", style="red")
         raise typer.Exit(1)
     
     # Check required directories
@@ -237,13 +237,13 @@ def validate_project(
     
     # Display validation results
     if missing_dirs or not config_exists:
-        console.print("⚠️  Project validation issues found:", style="yellow")
+        console.print("Project validation issues found:", style="yellow")
         if missing_dirs:
             console.print(f"Missing directories: {', '.join(missing_dirs)}")
         if not config_exists:
             console.print("Missing configuration file: configs/project_config.json")
     else:
-        console.print("✅ Project structure is valid!", style="green")
+        console.print("Project structure is valid!", style="green")
 
 
 def main():
